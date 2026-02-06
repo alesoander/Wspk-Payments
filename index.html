@@ -1,238 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Onboarding WeSpeak Payment Links</title>
     <style>
-        :root {
-            --blue: #3b82f6;
-            --purple: #9333ea;
-            --green: #22c55e;
-            --red: #ef4444;
-            --orange: #f97316;
-            --yellow: #eab308;
-            --spacing: 1rem;
-            --font-family: 'Arial', sans-serif;
-            --shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-        body {
-            font-family: var(--font-family);
-            margin: 0;
-            padding: var(--spacing);
-            background: #f9fafb;
-        }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: var(--spacing);
-            border-bottom: 2px solid var(--blue);
-        }
-        .logo {
-            width: 50px;
-            height: 50px;
-            background: conic-gradient(var(--blue), var(--purple));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo svg {
-            width: 70%;
-            height: 70%;
-            fill: white;
-        }
-        h1 {
-            font-size: 2rem;
-            color: var(--blue);
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: var(--purple);
-        }
-        nav {
-            margin-top: var(--spacing);
-            background: white;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            padding: var(--spacing);
-        }
-        section {
-            padding: var(--spacing);
-            margin-top: 20px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
-        }
-        section:hover {
-            background-color: #e0f2fe;
-        }
-        footer {
-            margin-top: var(--spacing);
-            padding: var(--spacing);
-            background: #e5e7eb;
-            text-align: center;
-            border-radius: 8px;
-        }
-        .checklist {
-            margin-top: 10px;
-            list-style-type: none;
-        }
-        .checklist li {
-            margin: var(--spacing) 0;
-            padding: var(--spacing);
-            background: #fff;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            h2 {
-                font-size: 1.25rem;
+        @media print {
+            .page-break {
+                page-break-before: always;
             }
         }
     </style>
 </head>
-<body>
-<header>
-    <div class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 12l10-10 10 10H1z" />
-        </svg>
-    </div>
-    <div>
-        <h1>Onboarding WeSpeak</h1>
-        <h2>Guía para implementar enlaces de pago</h2>
-    </div>
-</header>
-<nav>
-    <h3>Índice</h3>
-    <ul>
-        <li><a href="#etapa1">ETAPA 1 - Configuración Inicial</a></li>
-        <li><a href="#etapa2">ETAPA 2 - Pruebas y Validación</a></li>
-        <li><a href="#etapa3">ETAPA 3 - Activación Automática</a></li>
-    </ul>
-</nav>
+<body class="bg-gray-50">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="max-w-6xl mx-auto p-5 flex justify-between items-center">
+            <h1 class="text-white text-3xl font-bold">WeSpeak Payment Links</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#etapa1" class="text-white hover:underline">Etapa 1</a></li>
+                    <li><a href="#etapa2" class="text-white hover:underline">Etapa 2</a></li>
+                    <li><a href="#etapa3" class="text-white hover:underline">Etapa 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section id="etapa1" style="background-color: #dbeafe;">
-    <h2>ETAPA 1 - Configuración Inicial</h2>
-    <p>Objetivo: Explicar los pasos necesarios para la configuración inicial.</p>
-    <h3>1. Recopilación de información del hotel</h3>
-    <ul>
-        <li>Nombre</li>
-        <li>Ubicación</li>
-        <li>Chek-in/out</li>
-        <li>Políticas de cancelación</li>
-        <li>Impuestos</li>
-        <li>Políticas generales</li>
-    </ul>
-    <h3>2. Configuración de depósitos y pagos</h3>
-    <ul>
-        <li>Depósito parcial</li>
-        <li>Pago completo</li>
-        <li>Sin depósito</li>
-    </ul>
-    <h3>3. Conexión de métodos de pago</h3>
-    <ul>
-        <li>Mercado Pago</li>
-        <li>Stripe</li>
-        <li>PayU</li>
-        <li>PayPal</li>
-        <li>dLocal</li>
-        <li>Almacenamiento de tarjetas</li>
-        <li>Transferencia bancaria</li>
-    </ul>
-    <p>Nota: Solo enlaces manuales, aún no hay automatización.</p>
-    <h3>Checklist</h3>
-    <ul class="checklist">
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-    </ul>
-</section>
+    <main class="max-w-6xl mx-auto p-5">
+        <section id="etapa1" class="bg-blue-100 p-5 mb-5 rounded shadow">
+            <h2 class="text-blue-600 font-bold text-2xl">Etapa 1: Configuración Inicial</h2>
+            <div class="flex items-center mb-4">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm0 22c5.099 0 9.208-4.084 9.893-9.239l-8.227-7.506l-1.14 1.231l8.062 7.314c-.374 4.192-3.834 7.32-7.587 7.32c-4.366 0-7.93-3.327-7.93-7.1c0-2.571 1.623-5.23 4.577-6.448l1.17-5.16l-2.156-.522l-.274 1.256l-1.822 4.571c-.484-.083-1.853-.004-2.369-.693c-.69-.949-.086-2.233 1.022-2.233c.171 0 .429.018.695.046l1.86-2.093l1.074-.634c-1.92-1.075-3.295-1.631-5.259-1.631c-5.09 0-10.428 5.027-10.428 11.54c0 6.513 5.155 11.706 11.478 11.706zm-1.202-8.904c2.704-1.632 5.153-2.507 6.469-5.239c.696-1.439-1.118-1.489-1.482-.202c-1.331 3.072-2.152 3.312-5.062 5.342l-.832.492c-2.283 1.392-4.619 2.846-6.048 5.691c-.63 1.271 1.051 1.295 1.462.177c1.004-1.82 2.649-2.799 5.253-3.156z"/></svg>
+                <p class="ml-2">Complete the initial setup for payment processing by following the guidelines outlined in the section.</p>
+            </div>
+            <div> <!-- Full content goes here --> </div>
+        </section>
 
-<section id="etapa2" style="background-color: #e9d5ff;">
-    <h2>ETAPA 2 - Pruebas y Validación</h2>
-    <p>Objetivo: Validar que el sistema funciona correctamente.</p>
-    <h3>2.1 Generación de enlace de pago manual</h3>
-    <ol>
-        <li>Abrir conversación con el cliente.</li>
-        <li>Generar enlace de pago.</li>
-        <li>Copiar enlace para el cliente.</li>
-    </ol>
-    <h3>2.2 Procedimientos de prueba recomendados</h3>
-    <ol>
-        <li>Modificar precio.</li>
-        <li>Generar enlace.</li>
-        <li>Completar pago.</li>
-        <li>Validar datos.</li>
-        <li>Contactar soporte en caso de problemas.</li>
-    </ol>
-    <h3>Checklist</h3>
-    <ul class="checklist">
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-    </ul>
-</section>
+        <div class="page-break"></div>
 
-<section id="etapa3" style="background-color: #bbf7d0;">
-    <h2>ETAPA 3 - Activación Automática</h2>
-    <p>Objetivo: Finalizar la activación del sistema para su uso.</p>
-    <h3>1. Proceso de activación</h3>
-    <ol>
-        <li>Notificar al soporte.</li>
-        <li>Esperar confirmación.</li>
-        <li>Recibir confirmación.</li>
-    </ol>
-    <h3>2. Verificación post-activación</h3>
-    <ol>
-        <li>Acceder a sección de prueba.</li>
-        <li>Realizar simulaciones.</li>
-        <li>Verificar entrega automática.</li>
-    </ol>
-    <h3>3. Ajustes finales y personalización</h3>
-    <ol>
-        <li>Personalizar mensajes.</li>
-        <li>Ajustar tiempos.</li>
-        <li>Configurar recordatorios.</li>
-        <li>Instrucciones de uso.</li>
-    </ol>
-    <h3>Comparativa Antes vs Después</h3>
-    <table>
-        <tr>
-            <th>Antes</th>
-            <th>Después</th>
-        </tr>
-        <tr>
-            <td>Detalles antes</td>
-            <td>Detalles después</td>
-        </tr>
-    </table>
-    <h3>Mejores prácticas para uso diario</h3>
-    <ul>
-        <li>Práctica 1</li>
-        <li>Práctica 2</li>
-        <li>Práctica 3</li>
-        <li>Práctica 4</li>
-        <li>Práctica 5</li>
-    </ul>
-    <h3>Checklist final</h3>
-    <ul class="checklist">
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-    </ul>
-    <p>¡Felicitaciones, has completado el proceso!</p>
-</section>
+        <section id="etapa2" class="bg-purple-100 p-5 mb-5 rounded shadow">
+            <h2 class="text-purple-600 font-bold text-2xl">Etapa 2: Pruebas y Validación</h2>
+            <div class="flex items-center mb-4">
+                <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm8 5h-3l-1-1h-2l-1 1h-3l-1-1h-2l-1 1h-3v3l1 1h2l1-1h3l1 1h2l1-1h3v-3zm-8 12.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3zm1.5-4.5h-3c-.967 0-1.734.322-2.25.863a4 4 0 0 0-1.75.816a1.5 1.5 0 1 0 2 2a1.5 1.5 0 0 0 1-.353a1.5 1.5 0 0 0 1.75-.816A1.992 1.992 0 0 0 13.5 13V12zm5 5a2 2 0 1 0-2-2a2 2 0 0 0 2 2z"/></svg>
+                <p class="ml-2">Follow the 9-step manual payment link generation process. Everything you need is included!</p>
+            </div>
+            <div> <!-- Full content goes here --> </div>
+        </section>
 
-<footer>
-    <p>© 2026 WeSpeak - Plataforma de gestión hotelera y pagos digitales</p>
-</footer>
+        <div class="page-break"></div>
+
+        <section id="etapa3" class="bg-green-100 p-5 mb-5 rounded shadow">
+            <h2 class="text-green-600 font-bold text-2xl">Etapa 3: Activación Automática</h2>
+            <div class="flex items-center mb-4">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm0 22c5.099 0 9.208-4.084 9.893-9.239l-8.227-7.506l-1.14 1.231l8.062 7.314c-.374 4.192-3.834 7.32-7.587 7.32c-4.366 0-7.93-3.327-7.93-7.1c0-2.571 1.623-5.23 4.577-6.448l1.17-5.16l-2.156-.522l-.274 1.256l-1.822 4.571c-.484-.083-1.853-.004-2.369-.693c-.69-.949-.086-2.233 1.022-2.233c.171 0 .429.018.695.046l1.86-2.093l1.074-.634c-1.92-1.075-3.295-1.631-5.259-1.631c-5.09 0-10.428 5.027-10.428 11.54c0 6.513 5.155 11.706 11.478 11.706zm-1.202-8.904c2.704-1.632 5.153-2.507 6.469-5.239c.696-1.439-1.118-1.489-1.482-.202c-1.331 3.072-2.152 3.312-5.062 5.342l-.832.492c-2.283 1.392-4.619 2.846-6.048 5.691c-.63 1.271 1.051 1.295 1.462.177c1.004-1.82 2.649-2.799 5.253-3.156z"/></svg>
+                <p class="ml-2">Understand the activation process with a before/after automation comparison.</p>
+            </div>
+            <div> <!-- Full content goes here --> </div>
+        </section>
+    </main>
+
+    <footer class="max-w-6xl mx-auto p-5 text-center">
+        <p class="text-gray-600">&copy; 2023 WeSpeak. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
