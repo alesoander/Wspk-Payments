@@ -3,65 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Onboarding WeSpeak Payment Links</title>
-    <style>
-        @media print {
-            .page-break {
-                page-break-before: always;
-            }
-        }
-    </style>
+    <title>WeSpeak Payment Onboarding Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
-    <header class="bg-gradient-to-r from-blue-600 to-purple-600">
-        <div class="max-w-6xl mx-auto p-5 flex justify-between items-center">
-            <h1 class="text-white text-3xl font-bold">WeSpeak Payment Links</h1>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="#etapa1" class="text-white hover:underline">Etapa 1</a></li>
-                    <li><a href="#etapa2" class="text-white hover:underline">Etapa 2</a></li>
-                    <li><a href="#etapa3" class="text-white hover:underline">Etapa 3</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="bg-gray-100">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
+        <nav class="flex justify-between">
+            <div class="text-lg font-bold">WeSpeak</div>
+            <ul class="flex space-x-4">
+                <li><a href="#initial-configuration">Initial Configuration</a></li>
+                <li><a href="#testing-validation">Testing and Validation</a></li>
+                <li><a href="#automation-activation">Automation Activation</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="max-w-6xl mx-auto p-5">
-        <section id="etapa1" class="bg-blue-100 p-5 mb-5 rounded shadow">
-            <h2 class="text-blue-600 font-bold text-2xl">Etapa 1: Configuración Inicial</h2>
-            <div class="flex items-center mb-4">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm0 22c5.099 0 9.208-4.084 9.893-9.239l-8.227-7.506l-1.14 1.231l8.062 7.314c-.374 4.192-3.834 7.32-7.587 7.32c-4.366 0-7.93-3.327-7.93-7.1c0-2.571 1.623-5.23 4.577-6.448l1.17-5.16l-2.156-.522l-.274 1.256l-1.822 4.571c-.484-.083-1.853-.004-2.369-.693c-.69-.949-.086-2.233 1.022-2.233c.171 0 .429.018.695.046l1.86-2.093l1.074-.634c-1.92-1.075-3.295-1.631-5.259-1.631c-5.09 0-10.428 5.027-10.428 11.54c0 6.513 5.155 11.706 11.478 11.706zm-1.202-8.904c2.704-1.632 5.153-2.507 6.469-5.239c.696-1.439-1.118-1.489-1.482-.202c-1.331 3.072-2.152 3.312-5.062 5.342l-.832.492c-2.283 1.392-4.619 2.846-6.048 5.691c-.63 1.271 1.051 1.295 1.462.177c1.004-1.82 2.649-2.799 5.253-3.156z"/></svg>
-                <p class="ml-2">Complete the initial setup for payment processing by following the guidelines outlined in the section.</p>
+    <main class="p-6">
+        <section id="initial-configuration" class="bg-white rounded-lg shadow-md p-6 my-4">
+            <h2 class="text-2xl font-bold text-blue-600">Stage 1 - Initial Configuration</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Hotel Information</h3>
+                <ul class="list-disc pl-6">
+                    <li>Name</li>
+                    <li>Location</li>
+                    <li>Check-in/Check-out Times</li>
+                    <li>Cancellation Policies</li>
+                    <li>Taxes and General Policies</li>
+                </ul>
             </div>
-            <div> <!-- Full content goes here --> </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Payment Configuration Options</h3>
+                <p>Partial deposit, full advance payment, no deposit with descriptions and examples.</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Payment Methods</h3>
+                <ul class="list-disc pl-6">
+                    <li>Mercado Pago: Description</li>
+                    <li>Stripe: Description</li>
+                    <li>PayU: Description</li>
+                    <li>PayPal: Description</li>
+                    <li>dLocal: Description</li>
+                    <li>Card Storage: Description</li>
+                    <li>Bank Transfer: Description</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Connection Instructions</h3>
+                <ol class="list-decimal pl-6">
+                    <li>Step 1: Description</li>
+                    <li>Step 2: Description</li>
+                    <li>Step 3: Description</li>
+                    <li>Step 4: Description</li>
+                </ol>
+            </div>
+            <div class="bg-red-500 text-white p-4 rounded my-4">
+                <strong>Warning:</strong> Production credentials must be handled with care!
+            </div>
+            <div class="bg-red-500 text-white p-4 rounded my-4">
+                <strong>Restriction:</strong> Manual-only actions are required!
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Complete Checklist</h3>
+                <ul class="list-disc pl-6">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
         </section>
 
-        <div class="page-break"></div>
-
-        <section id="etapa2" class="bg-purple-100 p-5 mb-5 rounded shadow">
-            <h2 class="text-purple-600 font-bold text-2xl">Etapa 2: Pruebas y Validación</h2>
-            <div class="flex items-center mb-4">
-                <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm8 5h-3l-1-1h-2l-1 1h-3l-1-1h-2l-1 1h-3v3l1 1h2l1-1h3l1 1h2l1-1h3v-3zm-8 12.5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3zm1.5-4.5h-3c-.967 0-1.734.322-2.25.863a4 4 0 0 0-1.75.816a1.5 1.5 0 1 0 2 2a1.5 1.5 0 0 0 1-.353a1.5 1.5 0 0 0 1.75-.816A1.992 1.992 0 0 0 13.5 13V12zm5 5a2 2 0 1 0-2-2a2 2 0 0 0 2 2z"/></svg>
-                <p class="ml-2">Follow the 9-step manual payment link generation process. Everything you need is included!</p>
+        <section id="testing-validation" class="bg-white rounded-lg shadow-md p-6 my-4">
+            <h2 class="text-2xl font-bold text-purple-600">Stage 2 - Testing and Validation</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Manual Payment Link Generation</h3>
+                <ol class="list-decimal pl-6">
+                    <li>Step 1: Description</li>
+                    <li>Step 2: Description</li>
+                    <li>Step 3: Description</li>
+                    <li>Step 4: Description</li>
+                    <li>Step 5: Description</li>
+                    <li class="border-2 border-purple-600 p-2">Step 6: Activate Payment Link Option</li>
+                    <li>Step 7: Description</li>
+                    <li>Step 8: Description</li>
+                    <li class="border-2 border-green-500 p-2">Step 9: Automatic Copy Confirmation</li>
+                </ol>
             </div>
-            <div> <!-- Full content goes here --> </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Testing Procedure</h3>
+                <ol class="list-decimal pl-6">
+                    <li>Step 1: Description</li>
+                    <li>Step 2: Description</li>
+                    <li>Step 3: Description</li>
+                    <li>Step 4: Description</li>
+                    <li>Step 5: Description</li>
+                </ol>
+            </div>
+            <div class="bg-yellow-300 text-black p-4 rounded my-4">
+                <strong>Warning:</strong> Symbolic pricing issues may arise!
+            </div>
+            <p>Contact support for assistance if needed.</p>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Complete Checklist</h3>
+                <ul class="list-disc pl-6">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
         </section>
 
-        <div class="page-break"></div>
-
-        <section id="etapa3" class="bg-green-100 p-5 mb-5 rounded shadow">
-            <h2 class="text-green-600 font-bold text-2xl">Etapa 3: Activación Automática</h2>
-            <div class="flex items-center mb-4">
-                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12s-12-5.373-12-12s5.373-12 12-12zm0 22c5.099 0 9.208-4.084 9.893-9.239l-8.227-7.506l-1.14 1.231l8.062 7.314c-.374 4.192-3.834 7.32-7.587 7.32c-4.366 0-7.93-3.327-7.93-7.1c0-2.571 1.623-5.23 4.577-6.448l1.17-5.16l-2.156-.522l-.274 1.256l-1.822 4.571c-.484-.083-1.853-.004-2.369-.693c-.69-.949-.086-2.233 1.022-2.233c.171 0 .429.018.695.046l1.86-2.093l1.074-.634c-1.92-1.075-3.295-1.631-5.259-1.631c-5.09 0-10.428 5.027-10.428 11.54c0 6.513 5.155 11.706 11.478 11.706zm-1.202-8.904c2.704-1.632 5.153-2.507 6.469-5.239c.696-1.439-1.118-1.489-1.482-.202c-1.331 3.072-2.152 3.312-5.062 5.342l-.832.492c-2.283 1.392-4.619 2.846-6.048 5.691c-.63 1.271 1.051 1.295 1.462.177c1.004-1.82 2.649-2.799 5.253-3.156z"/></svg>
-                <p class="ml-2">Understand the activation process with a before/after automation comparison.</p>
+        <section id="automation-activation" class="bg-white rounded-lg shadow-md p-6 my-4">
+            <h2 class="text-2xl font-bold text-green-600">Stage 3 - Automation Activation</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Activation Process</h3>
+                <ol class="list-decimal pl-6">
+                    <li>Step 1: Description</li>
+                    <li>Step 2: Description</li>
+                    <li>Step 3: Description</li>
+                </ol>
             </div>
-            <div> <!-- Full content goes here --> </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Verification Procedures</h3>
+                <p>Ensure all steps are followed in the test section to validate the automation.</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Final Adjustments and Personalization</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-200 p-4 rounded">Option 1</div>
+                    <div class="bg-gray-200 p-4 rounded">Option 2</div>
+                    <div class="bg-gray-200 p-4 rounded">Option 3</div>
+                    <div class="bg-gray-200 p-4 rounded">Option 4</div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Before vs After Comparison</h3>
+                <table class="min-w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr>
+                            <th class="border border-gray-300 p-2">Before</th>
+                            <th class="border border-gray-300 p-2">After</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2">Old Setup</td>
+                            <td class="border border-gray-300 p-2">New Setup</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Best Practices for Daily Use</h3>
+                <ul class="list-disc pl-6">
+                    <li>Best Practice 1</li>
+                    <li>Best Practice 2</li>
+                    <li>Best Practice 3</li>
+                    <li>Best Practice 4</li>
+                    <li>Best Practice 5</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold">Congratulations</h3>
+                <p>You have successfully completed the onboarding process!</p>
+            </div>
         </section>
     </main>
-
-    <footer class="max-w-6xl mx-auto p-5 text-center">
-        <p class="text-gray-600">&copy; 2023 WeSpeak. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
