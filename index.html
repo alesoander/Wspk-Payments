@@ -1,1 +1,238 @@
-<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>WeSpeak Payment Onboarding Guide</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }\n        header { background-color: #4A90E2; padding: 20px; color: white; text-align: center; }\n        nav { margin: 20px 0; }\n        nav a { color: white; text-decoration: none; margin: 0 15px; }\n        h1, h2, h3 { margin: 20px 0; }\n        .toc { background-color: #f1f1f1; padding: 10px; margin: 20px 0; }\n        section { margin: 20px; }\n    </style>\n</head>\n<body>\n    <header>\n        <img src="weSpeak-logo.png" alt="WeSpeak Logo" />\n        <nav>\n            <a href="#etapa1">Etapa 1</a>\n            <a href="#etapa2">Etapa 2</a>\n            <a href="#etapa3">Etapa 3</a>\n        </nav>\n    </header>\n    <div class="toc">\n        <h2>Tabla de Contenidos</h2>\n        <ul>\n            <li><a href="#etapa1">Etapa 1: Configuración Inicial</a></li>\n            <li><a href="#etapa2">Etapa 2: Pruebas y Validación de Datos</a></li>\n            <li><a href="#etapa3">Etapa 3: Activación de Entrega Automática</a></li>\n        </ul>\n    </div>\n    <section id="etapa1">\n        <h2>Etapa 1: Configuración Inicial</h2>\n        <p>En esta etapa, se debe realizar la configuración inicial para preparar el sistema de pagos. Asegúrate de tener todos los datos requeridos y seguir las instrucciones específicas.</p>\n    </section>\n    <section id="etapa2">\n        <h2>Etapa 2: Pruebas y Validación de Datos</h2>\n        <p>Es esencial probar la integración y validar los datos antes de proceder a la activación. Realiza pruebas con diferentes escenarios para asegurar que todo funcione correctamente.</p>\n    </section>\n    <section id="etapa3">\n        <h2>Etapa 3: Activación de Entrega Automática</h2>\n        <p>Finalmente, activa la entrega automática de los pagos. Esta parte del proceso es crucial para garantizar que las transacciones se realicen de manera eficiente y sin problemas.</p>\n    </section>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding WeSpeak Payment Links</title>
+    <style>
+        :root {
+            --blue: #3b82f6;
+            --purple: #9333ea;
+            --green: #22c55e;
+            --red: #ef4444;
+            --orange: #f97316;
+            --yellow: #eab308;
+            --spacing: 1rem;
+            --font-family: 'Arial', sans-serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: var(--spacing);
+            background: #f9fafb;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing);
+            border-bottom: 2px solid var(--blue);
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background: conic-gradient(var(--blue), var(--purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo svg {
+            width: 70%;
+            height: 70%;
+            fill: white;
+        }
+        h1 {
+            font-size: 2rem;
+            color: var(--blue);
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--purple);
+        }
+        nav {
+            margin-top: var(--spacing);
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: var(--spacing);
+        }
+        section {
+            padding: var(--spacing);
+            margin-top: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        section:hover {
+            background-color: #e0f2fe;
+        }
+        footer {
+            margin-top: var(--spacing);
+            padding: var(--spacing);
+            background: #e5e7eb;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .checklist {
+            margin-top: 10px;
+            list-style-type: none;
+        }
+        .checklist li {
+            margin: var(--spacing) 0;
+            padding: var(--spacing);
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 12l10-10 10 10H1z" />
+        </svg>
+    </div>
+    <div>
+        <h1>Onboarding WeSpeak</h1>
+        <h2>Guía para implementar enlaces de pago</h2>
+    </div>
+</header>
+<nav>
+    <h3>Índice</h3>
+    <ul>
+        <li><a href="#etapa1">ETAPA 1 - Configuración Inicial</a></li>
+        <li><a href="#etapa2">ETAPA 2 - Pruebas y Validación</a></li>
+        <li><a href="#etapa3">ETAPA 3 - Activación Automática</a></li>
+    </ul>
+</nav>
+
+<section id="etapa1" style="background-color: #dbeafe;">
+    <h2>ETAPA 1 - Configuración Inicial</h2>
+    <p>Objetivo: Explicar los pasos necesarios para la configuración inicial.</p>
+    <h3>1. Recopilación de información del hotel</h3>
+    <ul>
+        <li>Nombre</li>
+        <li>Ubicación</li>
+        <li>Chek-in/out</li>
+        <li>Políticas de cancelación</li>
+        <li>Impuestos</li>
+        <li>Políticas generales</li>
+    </ul>
+    <h3>2. Configuración de depósitos y pagos</h3>
+    <ul>
+        <li>Depósito parcial</li>
+        <li>Pago completo</li>
+        <li>Sin depósito</li>
+    </ul>
+    <h3>3. Conexión de métodos de pago</h3>
+    <ul>
+        <li>Mercado Pago</li>
+        <li>Stripe</li>
+        <li>PayU</li>
+        <li>PayPal</li>
+        <li>dLocal</li>
+        <li>Almacenamiento de tarjetas</li>
+        <li>Transferencia bancaria</li>
+    </ul>
+    <p>Nota: Solo enlaces manuales, aún no hay automatización.</p>
+    <h3>Checklist</h3>
+    <ul class="checklist">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+</section>
+
+<section id="etapa2" style="background-color: #e9d5ff;">
+    <h2>ETAPA 2 - Pruebas y Validación</h2>
+    <p>Objetivo: Validar que el sistema funciona correctamente.</p>
+    <h3>2.1 Generación de enlace de pago manual</h3>
+    <ol>
+        <li>Abrir conversación con el cliente.</li>
+        <li>Generar enlace de pago.</li>
+        <li>Copiar enlace para el cliente.</li>
+    </ol>
+    <h3>2.2 Procedimientos de prueba recomendados</h3>
+    <ol>
+        <li>Modificar precio.</li>
+        <li>Generar enlace.</li>
+        <li>Completar pago.</li>
+        <li>Validar datos.</li>
+        <li>Contactar soporte en caso de problemas.</li>
+    </ol>
+    <h3>Checklist</h3>
+    <ul class="checklist">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+</section>
+
+<section id="etapa3" style="background-color: #bbf7d0;">
+    <h2>ETAPA 3 - Activación Automática</h2>
+    <p>Objetivo: Finalizar la activación del sistema para su uso.</p>
+    <h3>1. Proceso de activación</h3>
+    <ol>
+        <li>Notificar al soporte.</li>
+        <li>Esperar confirmación.</li>
+        <li>Recibir confirmación.</li>
+    </ol>
+    <h3>2. Verificación post-activación</h3>
+    <ol>
+        <li>Acceder a sección de prueba.</li>
+        <li>Realizar simulaciones.</li>
+        <li>Verificar entrega automática.</li>
+    </ol>
+    <h3>3. Ajustes finales y personalización</h3>
+    <ol>
+        <li>Personalizar mensajes.</li>
+        <li>Ajustar tiempos.</li>
+        <li>Configurar recordatorios.</li>
+        <li>Instrucciones de uso.</li>
+    </ol>
+    <h3>Comparativa Antes vs Después</h3>
+    <table>
+        <tr>
+            <th>Antes</th>
+            <th>Después</th>
+        </tr>
+        <tr>
+            <td>Detalles antes</td>
+            <td>Detalles después</td>
+        </tr>
+    </table>
+    <h3>Mejores prácticas para uso diario</h3>
+    <ul>
+        <li>Práctica 1</li>
+        <li>Práctica 2</li>
+        <li>Práctica 3</li>
+        <li>Práctica 4</li>
+        <li>Práctica 5</li>
+    </ul>
+    <h3>Checklist final</h3>
+    <ul class="checklist">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <p>¡Felicitaciones, has completado el proceso!</p>
+</section>
+
+<footer>
+    <p>© 2026 WeSpeak - Plataforma de gestión hotelera y pagos digitales</p>
+</footer>
+</body>
+</html>
